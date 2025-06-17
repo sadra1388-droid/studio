@@ -26,7 +26,7 @@ export function AppSidebar() {
     
     return (
       <SidebarMenuItem key={`${link.label}-${index}`}>
-        <Link href={link.href} passHref legacyBehavior>
+        <Link href={link.href}>
           <SidebarMenuButton
             className={cn(
               "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
@@ -68,7 +68,7 @@ export function AppSidebar() {
         </SidebarMenu>
         <SidebarSeparator className="my-2"/>
         <SidebarMenuItem>
-          <Link href="/auth/login" passHref legacyBehavior>
+          <Link href="/auth/login">
             <SidebarMenuButton
               className="text-sidebar-foreground hover:bg-destructive/20 hover:text-red-400"
               tooltip={{ children: "Log Out", className: "bg-popover text-popover-foreground border-border"}}
